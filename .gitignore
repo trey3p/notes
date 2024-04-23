@@ -4,6 +4,8 @@
 tmp/
 .auctex-auto/
 .obsidian
-.log
-.synctex.gz
-.out
+
+*.synctex.gz
+*.out
+*.aux
+*.agdai
