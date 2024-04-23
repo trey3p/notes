@@ -1,0 +1,75 @@
+\documentclass{article}
+\title{DPL HW 4}
+\author{Group A+: Richie Lourie, Trey Plante, Ari Eaton}
+\date{April 2024}
+
+\usepackage{amsmath,amsthm,amssymb,stmaryrd}
+\usepackage[alphabetic]{amsrefs}
+\usepackage{hyperref, cleveref}
+\usepackage[inline]{enumitem}
+\usepackage{proof}
+\usepackage{bussproofs}
+\input{macros.tex}
+
+\begin{document}
+
+\section{Dependent Type Theory}
+
+\subsection{Equalities}
+
+\begin{definition}
+  Definitional equality is a syntactic notion of equality decided by the normalization or reduction rules of a type theory. If two terms are definitionally equal, they can be freely substituted for eachother in any context without changing the meaning of the program.
+\end{definition}
+
+\begin{definition}
+  Propositional equality is a semantic notion of equality that is a proposition or type in the type theory. Two terms are propositionally equal if there exists a proof or a witness inhabiting a type expressing propositional equality between the two terms.
+\end{definition}
+
+\begin{remark}
+  Definitional equality is automated in Agda through the normalization of terms, while proving propositional equality is a task for the user. Definitional equality is a stronger notion than propositional equality and is usually decidable.The main distinction is that definitional equality is a syntactic notion built into the type theory, while propositional equality is a semantic notion expressed within the type theory itself.
+\end{remark}
+
+\section{Homotopy Type Theory}
+
+
+\subsection{Path Induction}
+
+\subsection{Contractible Types}
+
+\begin{definition}
+  The type $\A$ is \emph{contractible} if it comes equipped with an element of the type
+  \begin{equation*}
+    is-Contr(A) =: \Sigma_{(c : A)}\Pi_{(x : A)} a = x
+  \end{equation*}
+
+  Given $(c, C) : is-Contr(A)$, $c : A$ is the \emph{center of contraction} for $A$ and $C : \Pi_{(x : A)}$ is the \emph{contraction of $A$}.
+\end{definition}
+\begin{remark}[Intuition]
+  A type is contractible if there exists $a : A$ such that for every term $x : A$, there is a path $p : a = x$. We can say that a type is contractible if it is equivalent to the unit type, $\mathbf{1}$. A contractible type can be thought of as a type that contains only one unique element up to homotopy $\mathbf{[?]}$.
+\end{remark}
+
+\begin{remark}[Properties]
+  A few points about contractible types:
+  \begin{itemize}
+    \item All contractible types are equivalent to each other and the unit type.
+
+    \item Contractible types are a terminal object in the category of types and functions.
+
+    \item The path space between any two elements in a contractible type is itself contractible
+  \end{itemize}
+\end{remark}
+
+\begin{remark}[Examples]
+  \begin{itemize}
+    \item The unit type, $\mathbf{1}$, is contractible.
+
+    \item The type $\Sigma_{(a : A)} A$ is contractible for any type $A$. This type represents the idea of a pointed type, where $a : A$ serves as the distinguished point $\mathbf{[?]}$.
+
+    \item The type of paths between two equal terms $x = x$ is contractible for any $x : A$.
+
+  \end{itemize}
+\end{remark}
+
+[TODO: prove all contractible types are equvalent to unit type in agda]
+
+\end{document}
