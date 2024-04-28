@@ -84,7 +84,37 @@
   \end{itemize}
 \end{remark}
 
+\section{Truncation Levels and Homotopy Types}
+
+\begin{remark}[Truncation Levels]
+  Truncation levels are a way to classify types by their equality structures. They are defined inductively, with each level being a property a type may or may not satisfy. This means the truncation levels form a cumulative hierarchy, meaning that every type at a given truncation level also belongs to all higher truncation levels.
+\end{remark}
+
+\begin{remark}[Examples]
+  The first four n-types (n is a truncation level) are as follows.
+  \begin{itemize}
+    \item The -2-types are the contractible types. A type is a -2-type if it has one inhabitant up to equality. Thus, all inhabitants of a -2-type are equal and the equality type of a -2-type is always inhabited (contractible). The unit type is an exmaple.
+
+    \item The -1-types are the proposition types, or mere propositions. A type is a -1-type if any two of its inhabitants are equal. Propositions are either inhabited or uninhabited, and equality between inhabitants is always provable. The unit and empty types are examples. The equality type of a proposition is always either inhabited or uninhabited.
+
+    \item The 0-types are sets. A type is a set if equality between any two inhabitants is a proposition. Thus, any two inhabitants of a set are equal or unequal, and the equality is unique. The natural numbers and Booleans are examples. The equality type of a set is always a -1-type.
+
+    \item The 1-types are groupoids. A type is a groupoid if equality between any two inhabitants is a set. Thus, groupoids allow for multiple equalities between sets. The type of sets and the type of paths are examples. The equality type of a 1-type is always a 0-type.
+  \end{itemize}
+\end{remark}
+
+\begin{remark}[Homotopy Types]
+  Homotopy types are a way of describing types as spaces with a homotopy structure. Every type is a homotopy type because a type is space with a particular shape determined by its equalities. Homotopy types are not directly classified by integers, but rather by their homotopy-theoretic properties, such as contractibility, connectedness, or homotopy groups. The concept of homotopy types allows for the interpretation of types as topological spaces and the use of homotopy-theoretic reasoning in type theory.
+\end{remark}
+
+\begin{remark}[Relationship]
+  Truncation levels can be seen as a way to describe the homotopy type of a space in terms of its homotopy n-types. A type is an n-type if all of its homotopy groups above dimension n are trivial. For example, a (-1)-type (proposition) corresponds to a contractible space, a 0-type (set) corresponds to a discrete space, and a 1-type (groupoid) corresponds to a space with only non-trivial fundamental groupoid. Truncation levels provide a way to express the complexity of a homotopy type in terms of the highest non-trivial homotopy dimension.
+\end{remark}
+
+\section{Scratch and Todos}
+
 [TODO: prove all contractible types are equvalent to unit type in agda]
 [TODO: notes on truncation]
 [TODO: notes on apd, tpt, ap, decidable equality]
+[TODO prove Z = N + N]
 \end{document}
