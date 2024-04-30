@@ -12,15 +12,38 @@
 \begin{document}
 \maketitle
 \section{Dependent Type Theory}
+
+\subsection{Judgements}
+
+\begin{definition}
+  A \emph{synthetic judgment} is a judgment that requires evidence. For example, saying $A$ is true requires a proof of $A$; we need to search a for a proof to check the statememt.
+\end{definition}
+
+\begin{definition}
+  An \emph{analytic judgment} is a judgment that requires no further evidence. For example, saying $a$ is type $A$, $a : A$ is self-evident; we can check this statement from what is given.
+\end{definition}
+
 \subsection{Equalities}
 
 \begin{definition}
-  Definitional equality is a syntactic notion of equality decided by the normalization or reduction rules of a type theory. If two terms are definitionally equal, they can be freely substituted for eachother in any context without changing the meaning of the program.
+  Definitional equality is a syntactic notion of equality decided by the normalization or reduction rules of a type theory. If two terms are definitionally equal, they can be freely substituted for eachother in any context without changing the meaning of the program. The notes denote definitional equality for two terms $a, b : A$ as $a =_{A} b$.
 \end{definition}
 
+\begin{remark}[?]
+  Definitional equality can be thought of as an equality of \emph{sense} (a la Frege). Definitional equality is an analytic judgment.
+\end{remark}
+
 \begin{definition}
-  Propositional equality is a semantic notion of equality that is a proposition or type in the type theory. Two terms are propositionally equal if there exists a proof or a witness inhabiting a type expressing propositional equality between the two terms.
+  Propositional equality is a semantic notion of equality that is a proposition or type in the type theory. Two terms are propositionally equal if there exists a proof or a witness inhabiting a type expressing propositional equality between the two terms. Propositional equality is denoted by $a \equiv b$.
 \end{definition}
+
+\begin{remark}[?]
+  Propositional equality can be thought of as an equality of \emph{reference}. Propositional equality is a synthetic judgment.
+\end{remark}
+
+\begin{example}[?]
+ In classical mathematics, there are two propositions: true and false. Every single mathematical theorem refers to true or false, but they have different information content. Thus, all true mathematical theorems are propositionally equal, but they are not definitionally equal.
+\end{example}
 
 \begin{remark}
   Definitional equality is automated in Agda through the normalization of terms, while proving propositional equality is a task for the user. Definitional equality is a stronger notion than propositional equality and is usually decidable.The main distinction is that definitional equality is a syntactic notion built into the type theory, while propositional equality is a semantic notion expressed within the type theory itself.
@@ -29,6 +52,10 @@
 \begin{remark}
   The types in HoTT are treated intensionally rather than extensionally. Practically this means that we should think of types as being distinguished by the descriptions that define them, rather than by their contents. Thus, for example, the types ‘positive integer less than 3’ and ‘integer exponent n for which $a^n + b^n = c^n$ has a solution in the positive integers’ are fundamentally distinct types, even though it can be proved that they are extensionally equal. This extends to empty types as well: the type ‘even divisor of 9’ is a distinct type from ‘even divisor of 11’, even though both types are uninhabited. This has the advantage that the basic elements of the theory are closer to the descriptions of mathematical entities and the mathematical concepts that are directly used in practice.
 \end{remark}
+
+\begin{definition}
+Equivalence ...
+\end{definition}
 
 \subsection{Dependent Type}
 
