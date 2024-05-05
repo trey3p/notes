@@ -1,7 +1,7 @@
 # notes
 ## Studying
 * Dependent Type Theory
-  - Harper OPLSS Lectures + Programming in ML Dep Type Theory
+  - Harper OPLSS Lectures + Type Theory and Formal Proof
 * Category Theory
   - Awodey OPLSS Lectures + Category Theory in Context Riehl
 * HoTT
