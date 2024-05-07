@@ -7,7 +7,7 @@
 * Category Theory
   - Awodey OPLSS Lectures + Category Theory in Context Riehl
 * HoTT
-  - https://www.cs.bham.ac.uk/~mhe/HoTT-UF-in-Agda-Lecture-Notes/HoTT-UF-Agda.html#spartanmltt
+  - [Harper HoTT Course]([url](https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%2207756bb0-b872-4a4a-95b1-b77ad206dab3%22))
 * Cubical
   - https://www.youtube.com/playlist?list=PL0OBHndHAAZrGQEkOZGyJu7S7KudAJ8M9
   - https://favonia.org/courses/hdtt2020/
