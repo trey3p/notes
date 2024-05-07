@@ -30,8 +30,7 @@ Type theory is a deductive system that has one basic notions: types. The deducti
 \end{definition}
 
 \begin{definition}\label{dfn: judgment}
-  A judgment is $\Gamma \vdash J$, where $\Gamma$ is a context and $J$ is some assertion that is given from $\Gamma$. We can think of the context $\Gamma$ as a set of assumptions.
-  Judgments form the premises and conclusions of an inference rule.
+  A \emph{judgment} is $\Gamma \vdash J$, where $\Gamma$ is a context and $J$ is some assertion that is given from $\Gamma$. The possibilities for $J$ depend on the specific type theory being defined. We can think of the context $\Gamma$ as a set of assumptions. Judgments that appear in all type theories are term and type formation ($\Gamma \vdash a : A$ and $\Gamma \vdash A$) and term and type equality ($\Gamma \vdash a \equiv b$ and $\Gamma \vdash A \equiv B$). Judgments form the premises and conclusions of an inference rule.
 \end{definition}
 
 \begin{definition}
