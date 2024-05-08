@@ -1,5 +1,5 @@
 \documentclass{article}
-\title{Notes on HoTT}
+\title{Type Theory}
 \author{Trey Plante}
 \usepackage{parskip}
 \usepackage{amsmath,amsthm,amssymb,stmaryrd}
@@ -70,7 +70,7 @@ Type theory is a deductive system that has one basic notions: types. The deducti
   Definitional equality can be thought of as an equality of \emph{sense} (a la Frege). Definitional equality is an analytic judgment.
 \end{remark}
 
-\begin{definition}
+\begin{definition}\label{dfn: propositional equality}
   Propositional equality is a semantic notion of equality that is a proposition or type in the type theory. Two terms are propositionally equal if there exists a proof or a witness inhabiting a type expressing propositional equality between the two terms. Propositional equality is denoted by $a =_{A} b$.
 \end{definition}
 
@@ -134,7 +134,7 @@ HoTT describes types as spaces, terms as points in space (or, functions from the
 For any two $a : A$ and $b : B$ we can state that $a$ and $b$ are equal; terms of different types cannot be equal. The type corresponding to the proposition that $a : A$ and $b : B$ are equal is written $Id_{A}(a, b)$ or $a =_{A} b$. A term $x : Id_{A}(a, b)$ is called an \emph{identification} of $a$ and $b$. The only identifications that are guaranteed to exist are the self-identifications.
 
 \begin{definition}\label{dfn: identity-type}
-  Let $A$ be a type and consider $a : A$. We define the identity type at $a$ as an inductive family type $a =_{A} x$ indexed by $x : A$ with the constructor $refl_{a} a \equiv_{A} a$.
+  Let $A$ be a type and consider $a : A$. We define the identity type at $a$ as an inductive family type $a =_{A} x$ indexed by $x : A$ with the constructor $refl_{a} a \equiv_{A} a$. The identity type is the HoTT version of propositional equality discussed in~\cref{dfn: judgment}.
 \end{definition}
 
 The elimination rule for the identity type is called \emph{path induction}. The idea is that to prove a property holds for all identifications between terms of some type $A$ it suffices to show that the problem holds for all self-identifications $refl_{a}$. That is if, for all properties, if the base case satisfies some property, then all identifications do.
