@@ -9,3 +9,5 @@ tmp/
 *.out
 *.aux
 *.agdai
+*.bbl
+*.blg
