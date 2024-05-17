@@ -2,7 +2,6 @@
 ## Studying
 * Dependent Type Theory
   - Harper OPLSS Lectures
-  - Type Theory and Formal Proof
   - [Angiuli Principles of Dependent Types Notes](https://carloangiuli.com/courses/b619-sp24/notes.pdf)
 * Category Theory
   - Awodey OPLSS Lectures + Category Theory in Context Riehl
